@@ -20,17 +20,10 @@ export default function App(props) {
       temp[r][c] = "x";
       setPos(temp);
       if(gameOver()){
-
-        SetResult("Player 1")
-        setEnd(!end);
-        return;}
-        if(turn === 8)
-        {
-          setEnd(!end);
-          SetResult("Draw");
-          return
-        }
-        
+        cleanup("Player 1");
+        return;
+      }
+        if(checkDraw())return;
     }
     else
     {
@@ -38,20 +31,29 @@ export default function App(props) {
       temp[r][c] = "o";
       setPos(temp);
       if(gameOver()){
-        SetResult("Player 2")
-        setEnd(!end);
+        cleanup("Player 1");
         return;}
-      if(turn === 8)
-      {
-
-        setEnd(!end);
-        SetResult("Draw");
-        return
-      }
+     if(checkDraw())return;
     }
 
       setTurn(turn+1)
   }
+  const checkDraw = () => 
+    {
+       if(turn === 8)
+        {
+          setEnd(!end);
+          SetResult("Draw");
+          return true
+        }
+      return false;
+    }
+
+  const cleanup = (res) => 
+    {
+      SetResult(res)
+        setEnd(!end);
+    }
   const gameOver = (r,c) => 
   {
     if(pos[0][0] === "x" && pos[0][1] === "x" && pos[0][2] === "x")return true;
