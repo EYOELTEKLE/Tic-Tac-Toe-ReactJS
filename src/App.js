@@ -31,7 +31,7 @@ export default function App(props) {
       temp[r][c] = "o";
       setPos(temp);
       if(gameOver()){
-        cleanup("Player 1");
+        cleanup("Player 2");
         return;}
      if(checkDraw())return;
     }
