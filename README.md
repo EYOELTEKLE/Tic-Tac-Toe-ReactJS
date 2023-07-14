@@ -2,6 +2,6 @@
 
 ## Live URL - https://luxury-zuccutto-5aaf0c.netlify.app/
 
-### Use State Manipulation 
+### State Manipulation 
 
 ### Author - Eyoel Tekle :bowtie:
