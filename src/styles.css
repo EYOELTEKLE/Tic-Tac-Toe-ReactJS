@@ -1,0 +1,59 @@
+body
+{
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;  
+}
+.container {
+  font-family: sans-serif;
+  text-align: center;
+  display: grid;
+  border:1px solid black;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: repeat(3,1fr);
+}
+.container > button
+{
+  width:90px;
+  height:80px;
+  background: white;
+  outline: none;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  border:1px solid black;
+}
+.GameOver
+{
+  position: absolute;
+  background:red;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  z-index:100;
+}
+h1
+{
+  text-align: center;
+  color:yellow;
+  padding:0 1rem;
+}
+.reset
+{
+  margin-bottom:10px;
+}
+.po
+{
+  color:green;
+}
+h2
+{
+  font-size:14px;
+  text-align:center;
+ 
+}
